@@ -22,11 +22,12 @@ const now = new Date();
     }
   };
 
+  // Forex market hours in GMT/UTC
   const sessions = [
     { name: 'Sydney', open: '22:00', close: '07:00', timezone: 'GMT+10', color: '#6FCF97' },
-    { name: 'Tokyo', open: '23:00', close: '08:00', timezone: 'GMT+9', color: '#F2994A' },
-    { name: 'London', open: '07:00', close: '16:00', timezone: 'GMT+0', color: '#56CCF2' },
-    { name: 'New York', open: '12:00', close: '21:00', timezone: 'GMT-5', color: '#EB5757' },
+    { name: 'Tokyo', open: '00:00', close: '09:00', timezone: 'GMT+9', color: '#F2994A' },
+    { name: 'London', open: '08:00', close: '17:00', timezone: 'GMT+0', color: '#56CCF2' },
+    { name: 'New York', open: '13:00', close: '22:00', timezone: 'GMT-5', color: '#EB5757' },
   ];
 
   const openSessions = sessions.map(s => ({'name':s.name, 'open':s.open, 'close':s.close, 'timezone': s.timezone, 'color': s.color, 'isOpen': isBetween(s.open, s.close)}));
